@@ -1,0 +1,33 @@
+{
+  "name": "Map VN – Toạ độ VN-2000",
+  "short_name": "Map VN",
+  "id": "/app/Pvn2000/",
+  "description": "Bản đồ toạ độ VN-2000 theo tỉnh, dẫn đường, đo đạc, nạp DXF/KML/KMZ, lý trình, ảnh hiện trạng, xuất CSV/KML/KMZ/DXF.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c1117",
+  "theme_color": "#141a22",
+  "lang": "vi",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "share_target": {
+    "action": "./share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        { "name": "files", "accept": [".kml", ".kmz", ".dxf", ".csv", ".txt", ".gpx", "application/vnd.google-earth.kml+xml", "application/vnd.google-earth.kmz", "application/dxf", "text/csv", "text/plain", "application/octet-stream"] }
+      ]
+    }
+  },
+  "file_handlers": [
+    { "action": "./?open=1", "accept": { "application/vnd.google-earth.kml+xml": [".kml"], "application/vnd.google-earth.kmz": [".kmz"], "application/dxf": [".dxf"], "text/csv": [".csv"] } }
+  ]
+}
